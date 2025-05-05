@@ -50,6 +50,26 @@ carry:a p[V_init]
 weave:mɛ ð
 braid:kɔ t̪
 
+LEXICON ClassPrefix
+<CLð>:ð[ð]
+<CLŋ>:ŋ[ŋ]
+<CLr>:r[r]
+<CLɲ>:ɲ[ɲ]
+<CLg>:[g,noun]
+<CLg>:k[g]
+<CLj>:j[j]
+
+LEXICON FinalVowel
+<FVɔ>:ɔ
+<FVa>:a[IT]
+<FVɛ>:ɛ[IT,PFV]
+
+LEXICON Extension
+<CAUS>:ìj
+<PASS>:ìn
+<ANTIP>:ìð
+<BEN>:ìt̪
+
 LEXICON NounRoot
 tree:ùɽì[ð_sg,g_pl]
 rope:ár[ð_sg,j_pl]
@@ -60,23 +80,3 @@ LEXICON AdjectiveRoot
 good:ìcə̀lò
 bad:ìcò
 big:ə̀ɽà
-
-LEXICON ClassPrefix
-<CLð>:ð[ð]
-<CLŋ>:ŋ[ŋ]
-<CLr>:r[r]
-<CLɲ>:ɲ[ɲ]
-<CLg>:[g,noun]
-<CLg>:k[g]
-<CLj>:j[j]
-
-LEXICON Extension
-<CAUS>:ìj
-<PASS>:ìn
-<ANTIP>:ìð
-<BEN>:ìt̪
-
-LEXICON FinalVowel
-<FVɔ>:ɔ
-<FVa>:a[IT]
-<FVɛ>:ɛ[IT,PFV]
