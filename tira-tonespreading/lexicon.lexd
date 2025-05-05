@@ -1,0 +1,35 @@
+# Nouns
+
+PATTERN Noun
+ClassPrefix[ð] NounRoot[ð_sg] [<sg>:]
+ClassPrefix[ŋ] NounRoot[ŋ_sg] [<sg>:]
+
+ClassPrefix[r] NounRoot[r_pl] [<pl>:]
+ClassPrefix[ɲ] NounRoot[ɲ_pl] [<pl>:]
+ClassPrefix[g,noun] NounRoot[g_pl] [<pl>:]
+ClassPrefix[j] NounRoot[j_pl] [<pl>:]
+
+PATTERN Adjective
+ClassPrefix[-noun] AdjectiveRoot
+
+LEXICON High
+<H>:́
+
+LEXICON Low
+<L>:̀
+
+LEXICON Fall
+<HL>:̂
+
+LEXICON NounRoot(2)
+tree:u ɽi[ð_sg,g_pl,#L,L#]
+man:ɔ mɔ̀cɔ[ð_sg,r_pl,#L,L#]
+
+LEXICON NounRootMonoSyll(2)
+rope:a r[ð_sg,j_pl]
+dog:ɛ n[ŋ_sg,ɲ_pl]
+
+LEXICON AdjectiveRoot(2)
+good:i cə̀lò
+bad:i cò
+big:ə ɽà

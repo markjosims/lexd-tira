@@ -1,0 +1,81 @@
+# Verbs
+
+PATTERN ItivePerfectiveVerbStem
+:VerbRoot(1) High :VerbRoot(2) VerbRoot(1): Extension? FinalVowel[IT,PFV] Low
+
+PATTERN ItiveImperfectiveVerbStem
+:VerbRoot(1) High :VerbRoot(2) VerbRoot(1): Extension? FinalVowel[IT,-PFV] Low
+
+PATTERN VentiveVerbStem
+:VerbRoot(1) Low :VerbRoot(2) VerbRoot(1): Extension? FinalVowel[-IT] High
+
+PATTERN InflectedVerb
+ClassPrefix[-noun] Aux[-PFV] ItiveImperfectiveVerbStem
+ClassPrefix[-noun] ItivePerfectiveVerbStem[V_init]
+ClassPrefix[-noun] [:ə̀] ItivePerfectiveVerbStem[-V_init]
+ClassPrefix[-noun] Aux VentiveVerbStem
+
+# Nouns
+
+PATTERN Noun
+ClassPrefix[ð] NounRoot[ð_sg] [<sg>:]
+ClassPrefix[ŋ] NounRoot[ŋ_sg] [<sg>:]
+
+ClassPrefix[r] NounRoot[r_pl] [<pl>:]
+ClassPrefix[ɲ] NounRoot[ɲ_pl] [<pl>:]
+ClassPrefix[g,noun] NounRoot[g_pl] [<pl>:]
+ClassPrefix[j] NounRoot[j_pl] [<pl>:]
+
+PATTERN Adjective
+ClassPrefix[-noun] AdjectiveRoot
+
+PATTERNS
+InflectedVerb
+Noun
+Adjective
+
+LEXICON Aux
+<AUX.PFV.IT>:à[PFV]
+<AUX.IPFV>:á
+
+LEXICON High
+<H>:́
+
+LEXICON Low
+<L>:̀
+
+LEXICON VerbRoot(2)
+carry:a p[V_init]
+weave:mɛ ð
+braid:kɔ t̪
+
+LEXICON NounRoot(3)
+tree:ùɽì[ð_sg,g_pl]
+rope:ár[ð_sg,j_pl]
+man:ɔ̀mɔ̀cɔ̀[ð_sg,r_pl]
+dog:ɛ̂n[ŋ_sg,ɲ_pl]
+
+LEXICON AdjectiveRoot
+good:ìcə̀lò
+bad:ìcò
+big:ə̀ɽà
+
+LEXICON ClassPrefix
+<CLð>:ð[ð]
+<CLŋ>:ŋ[ŋ]
+<CLr>:r[r]
+<CLɲ>:ɲ[ɲ]
+<CLg>:[g,noun]
+<CLg>:k[g]
+<CLj>:j[j]
+
+LEXICON Extension
+<CAUS>:ìj
+# <PASS>:ìn
+# <ANTIP>:ìð
+<BEN>:ìt̪
+
+LEXICON FinalVowel
+<FVɔ>:ɔ
+<FVa>:a[IT]
+<FVɛ>:ɛ[IT,PFV]
