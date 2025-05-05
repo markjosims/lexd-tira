@@ -11,9 +11,10 @@ PATTERN VentiveVerbStem
 
 PATTERN InflectedVerb
 ClassPrefix[-noun] Aux[-PFV] ItiveImperfectiveVerbStem
-ClassPrefix[-noun] ItivePerfectiveVerbStem[V_init]
-ClassPrefix[-noun] [:ə̀] ItivePerfectiveVerbStem[-V_init]
-ClassPrefix[-noun] Aux VentiveVerbStem
+ClassPrefix[-noun] Aux[-PFV] VentiveVerbStem
+ClassPrefix[-noun] VentiveVerbStem[V_init]
+ClassPrefix[-noun] [:ə̀] VentiveVerbStem[-V_init]
+ClassPrefix[-noun] Aux ItivePerfectiveVerbStem
 
 # Nouns
 
@@ -49,7 +50,7 @@ carry:a p[V_init]
 weave:mɛ ð
 braid:kɔ t̪
 
-LEXICON NounRoot(3)
+LEXICON NounRoot
 tree:ùɽì[ð_sg,g_pl]
 rope:ár[ð_sg,j_pl]
 man:ɔ̀mɔ̀cɔ̀[ð_sg,r_pl]
@@ -71,8 +72,8 @@ LEXICON ClassPrefix
 
 LEXICON Extension
 <CAUS>:ìj
-# <PASS>:ìn
-# <ANTIP>:ìð
+<PASS>:ìn
+<ANTIP>:ìð
 <BEN>:ìt̪
 
 LEXICON FinalVowel

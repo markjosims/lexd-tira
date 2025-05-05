@@ -1,33 +1,50 @@
 # Nouns
 
 PATTERN Noun
-ClassPrefix[ð] NounRoot[ð_sg] [<sg>:]
-ClassPrefix[ŋ] NounRoot[ŋ_sg] [<sg>:]
+ClassPrefix[ð] NounStem[ð_sg] [<sg>:]
+ClassPrefix[ŋ] NounStem[ŋ_sg] [<sg>:]
+ClassPrefix[t̪] NounStem[t̪_sg] [<sg>:]
 
-ClassPrefix[r] NounRoot[r_pl] [<pl>:]
-ClassPrefix[ɲ] NounRoot[ɲ_pl] [<pl>:]
-ClassPrefix[g,noun] NounRoot[g_pl] [<pl>:]
-ClassPrefix[j] NounRoot[j_pl] [<pl>:]
+ClassPrefix[r] NounStem[r_pl] [<pl>:]
+ClassPrefix[ɲ] NounStem[ɲ_pl] [<pl>:]
+ClassPrefix[g] NounStem[g_pl] [<pl>:]
+ClassPrefix[j] NounStem[j_pl] [<pl>:]
+
+PATTERN NounStem
+:NounRoot(1) :NounRoot(2) :NounRoot(3) :NounRoot(4) NounRoot(1):
+:NounRoot(1) HighToneSpreading :NounRoot(3) :NounRoot(4) NounRoot(1):
 
 PATTERN Adjective
-ClassPrefix[-noun] AdjectiveRoot
+ClassPrefix[-noun] AdjectiveStem
 
-LEXICON High
-<H>:́
+PATTERN AdjectiveStem
+:AdjectiveRoot(1) [:\Low] AdjectiveRoot(2) AdjectiveRoot(1):
+:AdjectiveRoot(1) HighToneSpreading :AdjectiveRoot(2) AdjectiveRoot(1):
 
-LEXICON Low
-<L>:̀
+PATTERNS
+Adjective
+Noun
 
-LEXICON Fall
-<HL>:̂
+LEXICON HighToneSpreading
+<HTS>:\High
 
-LEXICON NounRoot(2)
-tree:u ɽi[ð_sg,g_pl,#L,L#]
-man:ɔ mɔ̀cɔ[ð_sg,r_pl,#L,L#]
+LEXICON ClassPrefix
+<CLð>:ð[ð]
+<CLŋ>:ŋ[ŋ]
+<CLr>:r[r]
+<CLɲ>:ɲ[ɲ]
+<CLg>:[g,noun]
+<CLg>:k[g]
+<CLj>:j[j]
+<CLt̪>:t̪[t̪]
 
-LEXICON NounRootMonoSyll(2)
-rope:a r[ð_sg,j_pl]
-dog:ɛ n[ŋ_sg,ɲ_pl]
+LEXICON NounRoot(4)
+# Columns are:
+#   1           2           3               4
+#   First TBU   First tone  Rest of word    Last tone
+tree:u \Low ɽi \Low[ð_sg,g_pl]
+man:ɔ \Low mɔ̀cɔ \Low[ð_sg,r_pl]
+lion:o \Low le \High[t̪_sg]
 
 LEXICON AdjectiveRoot(2)
 good:i cə̀lò
