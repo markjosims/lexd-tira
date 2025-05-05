@@ -39,10 +39,10 @@ LEXICON Aux
 <AUX.IPFV>:á
 
 LEXICON High
-<H>:́
+<H>:\High
 
 LEXICON Low
-<L>:̀
+<L>:\Low
 
 LEXICON VerbRoot(2)
 carry:a p[V_init]
