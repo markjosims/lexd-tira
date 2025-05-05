@@ -4,6 +4,7 @@ PATTERN Noun
 ClassPrefix[ð] NounStem[ð_sg] [<sg>:]
 ClassPrefix[ŋ] NounStem[ŋ_sg] [<sg>:]
 ClassPrefix[t̪] NounStem[t̪_sg] [<sg>:]
+ClassPrefix[l] NounStem[l_sg] [<sg>:]
 
 ClassPrefix[r] NounStem[r_pl] [<pl>:]
 ClassPrefix[ɲ] NounStem[ɲ_pl] [<pl>:]
@@ -11,8 +12,7 @@ ClassPrefix[g] NounStem[g_pl] [<pl>:]
 ClassPrefix[j] NounStem[j_pl] [<pl>:]
 
 PATTERN NounStem
-:NounRoot(1) :NounRoot(2) :NounRoot(3) :NounRoot(4) NounRoot(1):
-:NounRoot(1) HighToneSpreading :NounRoot(3) :NounRoot(4) NounRoot(1):
+NounRoot[initL]
 
 PATTERN Adjective
 ClassPrefix[-noun] AdjectiveStem
@@ -22,8 +22,8 @@ PATTERN AdjectiveStem
 :AdjectiveRoot(1) HighToneSpreading :AdjectiveRoot(2) AdjectiveRoot(1):
 
 PATTERNS
-Adjective
-Noun
+# Adjective
+NounStem
 
 LEXICON HighToneSpreading
 <HTS>:\High
@@ -36,15 +36,14 @@ LEXICON ClassPrefix
 <CLg>:[g,noun]
 <CLg>:k[g]
 <CLj>:j[j]
+<CLj>:l[l]
 <CLt̪>:t̪[t̪]
 
-LEXICON NounRoot(4)
-# Columns are:
-#   1           2           3               4
-#   First TBU   First tone  Rest of word    Last tone
-tree:u \Low ɽi \Low[ð_sg,g_pl]
-man:ɔ \Low mɔ̀cɔ \Low[ð_sg,r_pl]
-lion:o \Low le \High[t̪_sg]
+LEXICON NounRoot(2)
+tree:u ɽi[ð_sg,g_psl,initL,finL]    # ðùɽì/ùɽì
+man:ɔ mɔ̀cɔ[ð_sg,r_pl,initL,finL]   # ðɔ̀mɔ̀cɔ̀/rɔ̀mɔ̀cɔ̀
+lion:o le[t̪_sg,initL,finH]         # tòlé
+back:ɔ rɔ[l_sg,g_pl,finH,initH]    # lɔ́rɔ́, ŋɔ́rɔ́
 
 LEXICON AdjectiveRoot(2)
 good:i cə̀lò

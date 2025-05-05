@@ -14,11 +14,13 @@ ClassPrefix[-noun] Aux[-PFV] ItiveImperfectiveVerbStem
 ClassPrefix[-noun] Aux[-PFV] VentiveVerbStem
 ClassPrefix[-noun] VentiveVerbStem[V_init]
 ClassPrefix[-noun] [:ə̀] VentiveVerbStem[-V_init]
-ClassPrefix[-noun] Aux ItivePerfectiveVerbStem
+ClassPrefix[-noun] Aux[PFV] ItivePerfectiveVerbStem
+# CL à vérb-ɛ̀
 
 # Nouns
 
 PATTERN Noun
+# General pattern: CL NounRoot
 ClassPrefix[ð] NounRoot[ð_sg] [<sg>:]
 ClassPrefix[ŋ] NounRoot[ŋ_sg] [<sg>:]
 
